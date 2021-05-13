@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Change URL here for webview here
+        // Change URL here of your desired website to build your apk for Android
         val mWebView : WebView = findViewById<View>(R.id.superWeb) as WebView
         mWebView.loadUrl("https://portal.supertraderfx.com/")
 
