@@ -50,12 +50,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         mWebView.webViewClient = WebViewClient()
-//        mWebView.setDownloadListener { url: String?, userAgent: String?, contentDisposition: String?, mimetype: String?, contentLength: Long ->
-//            val intent = Intent(Intent.ACTION_VIEW)
-//            intent.data = Uri.parse(url)
-//            startActivity(intent)
-//        }
-
         mWebView.canGoBack()
         mWebView.setOnKeyListener { v, keyCode, event ->
 
@@ -74,40 +68,4 @@ class MainActivity : AppCompatActivity() {
             val activeNetworkInfo = connectivityManager.activeNetworkInfo
             return activeNetworkInfo != null && activeNetworkInfo.isConnected
         }
-
-//    fun visible() {
-//        val webview = findViewById<WebView>(R.id.superWeb)
-//        val bar = findViewById<ProgressBar>(R.id.progress_bar)
-//        webview.visibility = View.GONE
-//        bar.visibility = View.VISIBLE
-//    }
-//
-//    // function to keep certain UI components hidden when not needed
-//    fun invisible() {
-//        val webview = findViewById<WebView>(R.id.superWeb)
-//        val bar = findViewById<ProgressBar>(R.id.progress_bar)
-//        webview.visibility = View.VISIBLE
-//        bar.visibility = View.GONE
-//    }
-
-   /* private inner class CustomWebViewClient : WebViewClient() {
-
-        override fun shouldOverrideUrlLoading(webview: WebView, url: String): Boolean {
-            webview.loadUrl(url)
-            return true
-        }
-
-        override fun onReceivedError(view: WebView, errorCode: Int,
-                                     description: String?, failingUrl: String?) {
-            view.loadUrl("file:///android_asset/noconnection.html")
-        }
-
-        override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
-            visible()
-        }
-
-        override fun onPageFinished(view: WebView, url: String?) {
-            invisible()
-        }
-    }*/
 }
